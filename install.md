@@ -62,23 +62,18 @@ The following commands will install Docker on Kali:
 
 
 
+## Docker container
 
+1. Cowrie:
+   1.  docker pull cowrie/cowrie
+   2. docker run -p 22:2222 -v ~/cowrie:/cowrie/cowrie-git/var cowrie/cowrie
+2. HoneyTrap
+   1. mkdir ~/honeytrap
+   2. docker network create honeytrap
+   3. sudo mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
+   4. sudo sysctl -w vm.max_map_count**=**262144
+   5. cd ~/honeytrap
+   6. [wget https://raw.githubusercontent.com/AMKuperus/honeytrap-configs/master/HoneyTrap-local-playground/config.toml]
+   7.  wget https://raw.githubusercontent.com/AMKuperus/honeytrap-configs/master/HoneyTrap-local-playground/docker-compose-honeytrap-playground.yml
+   8. docker-compose -f docker-compose-honeytrap-playground.yml up
 
-# honeyd
-
-## Install libevent
-
-1. mkdir ~/libevent && cd ~/libevent
-2. wget https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
-3. tar -xvzf libevent-2.1.8-stable.tar.gz && cd libevent-2.1.8-stable/
-4. ./configure
-5. make
-6. sudo make install
-
-## Install honeyd
-
-1. ln -s /lib/x86_64-linux-gnu/libc.so.6 /usr/lib/libc.so
-2. mkdir ~/honeyd && cd ~/honeyd
-3. wget http://www.honeyd.org/uploads/honeyd-1.5c.tar.gz
-4. tar -xvzf honeyd-1.5c.tar.gz && cd honeyd-1.5c/
-5. ./configure
