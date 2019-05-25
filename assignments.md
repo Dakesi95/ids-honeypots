@@ -1,8 +1,8 @@
 # Intrusion Detection Systems Assignments
-
-
-
-
+1. Teil: <br>
+   Live Traffic auswerten (Ping, FTP, ...), gewisse Maschinen blacklisten oder einfache Alerts erzeugen
+2. Teil: <br>
+   Arbeiten mit einer PCAP
 
 
 
@@ -10,7 +10,7 @@
 
 # Honeypot Assignments
 
-### 1. Setting up a SSH Honeypot
+### 1. Medium Interactive SSH Honeypot
 
 Use `cowrie`  to set up a SSH "vulnerability".  Start the `cowrie`  docker container and configure it to open  a weak protected SSH port.
 
@@ -22,9 +22,7 @@ Use `cowrie`  to set up a SSH "vulnerability".  Start the `cowrie`  docker conta
 7. Downloaded files are located under `var/lib/cowrie/downloads/`
 7. Stop the container `docker stop cowrie`
 
-
-
-### 2. Setting up HoneyTrap
+### 2. Low Interactive HoneyTrap
 
 1. Start the HoneyTrap container using docker-compose. Navigate to the directory `~/honeypot` and start the container(s) with `docker-compose up`  <br>[Note 1: This will start also a elasticsearch and kibana container, wich we will use in task 2.7]<br>[Note 2: Make sure you stopped the cowrie container, otherwise docker can't publish port 22 as the cowrie container is still publishing it]
 2. Start a ssh-service on port 22 and a telnet- service on port 23. Take a look at the slides or look at the manuals [<https://docs.honeytrap.io/services/>]. The config file is located in the same directory and is  called `config.toml` <br>[Note: You don't need to edit the `docker-compose.yml` , it is configured for all tasks.]<br>[Note 2: You need to restart the docker honeytrap container `docker-compose restart honeytrap`]
@@ -39,6 +37,17 @@ Use `cowrie`  to set up a SSH "vulnerability".  Start the `cowrie`  docker conta
 
 
 
-Nice list of different types of honeypots:
+### 3. High-interactive Honeypot with a honeywall
 
-<https://github.com/paralax/awesome-honeypots>
+1. Start a "blank" Docker CentOS/Alpine Container 
+
+2. Start the Honeywall on it
+
+3. Work against the Honeywall
+
+4. Look at the logs
+
+   
+
+Nice list of different types of honeypots:  https://github.com/paralax/awesome-honeypots
+
