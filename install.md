@@ -71,9 +71,10 @@ The following commands will install Docker on Kali:
    1. mkdir ~/honeytrap
    2. docker network create honeytrap
    3. sudo mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
-   4. sudo sysctl -w vm.max_map_count**=**262144
-   5. cd ~/honeytrap
-   6. [wget https://raw.githubusercontent.com/AMKuperus/honeytrap-configs/master/HoneyTrap-local-playground/config.toml]
-   7.  wget https://raw.githubusercontent.com/AMKuperus/honeytrap-configs/master/HoneyTrap-local-playground/docker-compose-honeytrap-playground.yml
-   8. docker-compose -f docker-compose-honeytrap-playground.yml up
+   4. Add to file `/etc/sysctl.conf` the following content: `vm.max_map_count=262144` 
+   5. run sudo sysctl -p
+   6. cd ~/honeytrap
+   7. [wget https://raw.githubusercontent.com/AMKuperus/honeytrap-configs/master/HoneyTrap-local-playground/config.toml]
+   8. wget https://raw.githubusercontent.com/AMKuperus/honeytrap-configs/master/HoneyTrap-local-playground/docker-compose-honeytrap-playground.yml
+   9. docker-compose -f docker-compose-honeytrap-playground.yml up
 
