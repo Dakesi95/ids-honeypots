@@ -49,14 +49,3 @@ services:
       - "443:443"
     volumes:
       - ./config.toml:/config/config.toml
-    # Keep trying to start HoneyTrap. HoneyTrap will exit when Elastic is not ready.
-    # Healthcheck condition in depends_on has been deprecated after version 2.1
-    restart: on-failure
-    depends_on:
-      - elasticsearch
-    networks:
-      - honeytrap
-
-networks:
-  honeytrap:
-        external: true
