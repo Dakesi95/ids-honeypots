@@ -1,9 +1,29 @@
 # Intrusion Detection Systems Assignments
-1. Teil: <br>
-   Live Traffic auswerten (Ping, FTP, ...), gewisse Maschinen blacklisten oder einfache Alerts erzeugen
-2. Teil: <br>
-   Arbeiten mit einer PCAP
+### 1. Configuration of Snort
+You need 2 VMs for this assignment:
+- an attacker VM (Kali prefered)
+- a VM with Snort installed
 
+1. Run `ifconfig`to see all network interfaces
+2. Get your network interface and the corresponding IP address
+3. Open `/etc/snort/snort.config`and modify `$_HOME_NET`with your IP address
+4. Open `/etc/snort/rules/local.rules`and insert following rule: `alert icmp any any -> $HOME_NET any (msg:"machine was pinged"; sid:1000001; rev:1; classtype:icmp-event;)`
+5. Run `starting snort: sudo snort -A console -q -u snort -g snort -c /etc/snort/snort.conf -i enp0s3` in `/snort/snort-2.9.13`
+6. Ping IDS VM from attacker VM
+7. IDS VM shows the configured alert
+
+### 2. Interaction with a FTP Server
+You need 2 VMs for this assignment:
+- an attacker VM with vsftpd installed
+- a VM with Snort and vsftpd installed. Add a user via `sudo adduser test`
+
+1. Get IP from attacker VM from configuration task
+2. Create an alert which detects connections to ftp server on IDS VM  from attacker VM
+3. Create an alert which detects failed authentications on IDS VM's ftp server
+
+### 3. Port scans
+1. Write a rule that is able to detect a TCP Scan on Port 22
+2. Write a rule that is able to detect a FIN Scan on Port 80
 
 
 
