@@ -7,6 +7,16 @@
 
 Restart machine afterwards.
 
+The `/install-scripts/install-snort.sh` will install snort & all required plugins for you.
+
+## Install required plugins
+
+1. sudo apt-get install build-essential
+2. sudo apt-get install -y libpcap-dev libpcre3-dev libdumbnet-dev
+3. sudo apt-get install -y zlib1g-dev liblzma-dev openssl libssl-dev
+4. sudo apt-get install bison flex
+5. sudo make install
+
 ## Install Lua
 
 The following commands will download the Lua Just-in-time-compiler in the home directory. It is required by Snort:
@@ -18,13 +28,6 @@ The following commands will download the Lua Just-in-time-compiler in the home d
 5. sudo make install
 6. sudo apt-get install liblua5.1-0-dev
 
-## Install required plugins
-
-1. sudo apt-get install build-essential
-2. sudo apt-get install -y libpcap-dev libpcre3-dev libdumbnet-dev
-3. sudo apt-get install -y zlib1g-dev liblzma-dev openssl libssl-dev
-4. sudo apt-get install bison flex
-5. sudo make install
 
 ## Install daq
 
