@@ -59,13 +59,15 @@ The following commands will install Docker on Kali:
 3. apt-get update
 4. apt-get remove docker docker-engine docker.io
 5. apt-get install docker-ce
+6. sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+7. sudo chmod +x /usr/local/bin/docker-compose
 
 
 
 ## Docker container
 
 1. Cowrie:
-   1.  docker pull cowrie/cowrie
+   1. docker pull cowrie/cowrie
    2. docker run -p 22:2222 -v ~/cowrie:/cowrie/cowrie-git/var cowrie/cowrie
 2. HoneyTrap
    1. mkdir ~/honeytrap
