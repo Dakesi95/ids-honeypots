@@ -52,7 +52,7 @@ Snort need some folder and files to place its logs,errors and rules files, there
 
 ## Install Docker on Kali Linux
 
-The following commands will install Docker on Kali:
+Use the `install-scripts/install-docker.sh` script or the following commands to install Docker on Kali:
 
 1. curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add
 2. echo 'deb https://download.docker.com/linux/debian stretch stable' > /etc/apt/sources.list.d/docker.list
@@ -62,19 +62,27 @@ The following commands will install Docker on Kali:
 6. sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 7. sudo chmod +x /usr/local/bin/docker-compose
 
+<br><br>
+
+To install Docker on Ubuntu:
+1. sudo snap install docker
+
 
 
 ## Docker container
 
 1. Cowrie:
    1. docker pull cowrie/cowrie
-   2. docker run -p 22:2222 -v ~/cowrie:/cowrie/cowrie-git/var cowrie/cowrie
+   2. mkdir ~/cowrie
+   3. cd ~/cowrie
+   4. `docker-compose.yml` to `~/cowrie`
+   5. docker-compose up 
+   
 2. HoneyTrap
    1. mkdir ~/honeytrap
    2. docker network create honeytrap
    3. sudo mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
    4. Add to file `/etc/sysctl.conf` the following content: `vm.max_map_count=262144` 
-   
    5. sudo sysctl -p
    6. cd ~/honeytrap
    7. copy `config.toml` to `~/honeytrap`
