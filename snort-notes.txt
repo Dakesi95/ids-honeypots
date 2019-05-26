@@ -1,9 +1,0 @@
-Installing Snort:
-- pre config:
-  - installing luaJit: 
-    sudo apt-get install luajit
-    sudo apt-get install liblua5.1-0-dev
-
-- follow guide: https://cyberpersons.com/2016/07/18/install-snort-ubuntu/
-- Step 3: use current version of snort
-- Step 5: execute sh snort-preconfig.sh
