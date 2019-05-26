@@ -17,6 +17,8 @@ You need 2 VMs for this assignment:
 - an attacker VM with vsftpd installed
 - a VM with Snort and vsftpd installed. Add a user via `sudo adduser test`
 
+Hint: If Snort doesn´t show alerts, maybe start it with option `-k none`
+
 1. Get IP from attacker VM from configuration task
 2. Create an alert which detects connections to ftp server on IDS VM  from attacker VM
 3. Create an alert which detects failed authentications on IDS VM's ftp server
