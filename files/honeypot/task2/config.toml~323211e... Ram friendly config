@@ -1,0 +1,19 @@
+[listener]
+type="socket"
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Enter here the service config
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[channel.console]
+type="console"
+
+[[filter]]
+channel=["console"]
+
+[[logging]]
+output = "stdout"
+level = "debug"
+
