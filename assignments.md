@@ -52,8 +52,12 @@ Use `cowrie`  to set up a SSH "vulnerability". Start the `cowrie`  docker contai
 4. How does it differ from `cowrie`?
 5. Now setup services `tcp/80` (for HTTP) and `tcp/443` (for HTTPS) to imitate an Webserver.<br>[Note 1: You need to restart the honeytrap server afterwards]<br>[Note 2: Try to access these sites from a browser]
 6. Access these sites. What do you see?
-7. Visualize the honeypot Events with Kibana. Head to `localhost:5601`.
-   1. Set `honeytrap`  as Index Pattern.
-   2. Press on `Discover` on the left side and take a look at the events.
-   3. [Optional] In order to filter the cyclic heartbeat messages, use `NOT category: heartbeat` as a filter]
+7. [Optional] Visualize the honeypot events with Kibana. Use therefore the files in the config and docker-compose files in the `~/honeypot/task2/2.7`-folder
+   1. Switch off the VM and give it the maximum of power you can afford.
+   2. Add to file `/etc/sysctl.conf` the following content: `vm.max_map_count=262144` 
+   3. sudo sysctl -p
+   4. Head to `localhost:5601`. 
+   5. Set `honeytrap`  as Index Pattern.
+   6. Press on `Discover` on the left side and take a look at the events.
+   7. In order to filter the cyclic heartbeat messages, use `NOT category: heartbeat` as a filter]
    

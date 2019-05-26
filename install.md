@@ -82,9 +82,7 @@ To install Docker on Ubuntu:
    1. mkdir ~/honeytrap
    2. docker network create honeytrap
    3. sudo mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
-   4. Add to file `/etc/sysctl.conf` the following content: `vm.max_map_count=262144` 
-   5. sudo sysctl -p
-   6. cd ~/honeytrap
-   7. copy `config.toml` to `~/honeytrap`
-   8. copy `docker-compose.yml` to `~/honeytrap`
-   9. docker-compose up
+   4. cd ~/honeytrap
+   5. copy `config.toml` to `~/honeytrap`
+   6. copy `docker-compose.yml` to `~/honeytrap`
+   7. docker-compose up
