@@ -10,12 +10,8 @@ type="socket"
 [channel.console]
 type="console"
 
-[channel.elasticsearch]
-type="elasticsearch"
-url="http://elasticsearch:9200/honeytrap"
-
 [[filter]]
-channel=["console", "elasticsearch"]
+channel=["console"]
 
 [[logging]]
 output = "stdout"
