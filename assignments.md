@@ -8,7 +8,7 @@ You need 2 VMs for this assignment:
 2. Get your network interface and the corresponding IP address
 3. Open `/etc/snort/snort.config`and modify `$_HOME_NET`with your IP address
 4. Open `/etc/snort/rules/local.rules`and insert following rule: `alert icmp any any -> $HOME_NET any (msg:"machine was pinged"; sid:1000001; rev:1; classtype:icmp-event;)`
-5. Run `starting snort: sudo snort -A console -q -u snort -g snort -c /etc/snort/snort.conf -i enp0s3` in `/snort/snort-2.9.13`
+5. Run `sudo snort -A console -q -u snort -g snort -c /etc/snort/snort.conf -i enp0s3` in `/snort/snort-2.9.13`
 6. Ping IDS VM from attacker VM
 7. IDS VM shows the configured alert
 
