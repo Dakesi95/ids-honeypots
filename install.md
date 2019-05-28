@@ -15,7 +15,6 @@ The `/install-scripts/install-snort.sh` will install snort & all required plugin
 2. sudo apt-get install -y libpcap-dev libpcre3-dev libdumbnet-dev
 3. sudo apt-get install -y zlib1g-dev liblzma-dev openssl libssl-dev
 4. sudo apt-get install bison flex
-5. sudo make install
 
 ## Install Lua
 
