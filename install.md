@@ -1,6 +1,6 @@
 # Snort
 
-## Bring dist to latest release
+### Bring dist to latest release
 
 1. sudo apt-get update
 2. sudo apt-get dist-upgrade
@@ -9,14 +9,14 @@ Restart machine afterwards.
 
 The `/install-scripts/install-snort.sh` will install snort & all required plugins for you.
 
-## Install required plugins
+### Install required plugins
 
 1. sudo apt-get install build-essential
 2. sudo apt-get install -y libpcap-dev libpcre3-dev libdumbnet-dev
 3. sudo apt-get install -y zlib1g-dev liblzma-dev openssl libssl-dev
 4. sudo apt-get install bison flex
 
-## Install Lua
+### Install Lua
 
 The following commands will download the Lua Just-in-time-compiler in the home directory. It is required by Snort:
 
@@ -28,7 +28,7 @@ The following commands will download the Lua Just-in-time-compiler in the home d
 6. sudo apt-get install liblua5.1-0-dev
 
 
-## Install daq
+### Install daq
 
 1. mkdir ~/snort && cd ~/snort
 2. wget https://www.snort.org/downloads/snort/daq-2.0.6.tar.gz
@@ -37,7 +37,7 @@ The following commands will download the Lua Just-in-time-compiler in the home d
 5. make
 6. sudo make install
 
-## Install snort
+### Install snort
 
 1. cd ~/snort
 2. wget https://www.snort.org/downloads/snort/snort-2.9.13.tar.gz
