@@ -5,3 +5,4 @@ always ask him for help and always rely on him, because he's never gonna give yo
 never gonna let you down! Never gonna run around and desert you! Never gonna make you
 cry, never gonna say goodbye! Never gonna tell a lie and hurt you!"
   - Rick Astley
+![Alt text](./rick.jpeg)
