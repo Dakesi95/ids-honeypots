@@ -50,11 +50,11 @@ The following commands will download the Lua Just-in-time-compiler in the home d
 
 snort is now installed. Check it out with `snort -V`
 
-Snort need some folder and files to place its logs,errors and rules files, therefore run the `setup-dirs.sh`script with `sh setup-dirs.sh`
+Snort need some folder and files to place its logs,errors and rules files, therefore run the `/install-scripts/setup-dirs.sh`script with `sh setup-dirs.sh`
 
 ## Install Docker on Kali Linux
 
-Use the `install-scripts/install-docker.sh` script or the following commands to install Docker on Kali:
+Use the `/install-scripts/install-docker.sh` script or the following commands to install Docker on Kali:
 
 1. curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add
 2. echo 'deb https://download.docker.com/linux/debian stretch stable' > /etc/apt/sources.list.d/docker.list
@@ -77,12 +77,11 @@ To install Docker on Ubuntu:
    1. docker pull cowrie/cowrie
    2. mkdir ~/cowrie
    3. cd ~/cowrie
-   4. `docker-compose.yml` to `~/cowrie`
    
 2. HoneyTrap
    1. mkdir ~/honeytrap
    2. docker network create honeytrap
    3. cd ~/honeytrap
    4. mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
-   5. copy `files/honeypot/task2/config.toml` to `~/honeytrap`
-   6. copy `files/honeypot/task2/docker-compose.yml` to `~/honeytrap`
+   5. copy `/files/honeypot/task2/config.toml` to `~/honeytrap`
+   6. copy `/files/honeypot/task2/docker-compose.yml` to `~/honeytrap`
