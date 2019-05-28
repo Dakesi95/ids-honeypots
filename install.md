@@ -72,20 +72,18 @@ To install Docker on Ubuntu:
 
 
 
-## Docker container
+## Pull required Docker containers
 
 1. Cowrie:
    1. docker pull cowrie/cowrie
    2. mkdir ~/cowrie
    3. cd ~/cowrie
    4. `docker-compose.yml` to `~/cowrie`
-   5. docker-compose up 
    
 2. HoneyTrap
    1. mkdir ~/honeytrap
    2. docker network create honeytrap
-   3. sudo mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
-   4. cd ~/honeytrap
-   5. copy `config.toml` to `~/honeytrap`
-   6. copy `docker-compose.yml` to `~/honeytrap`
-   7. docker-compose up
+   3. cd ~/honeytrap
+   4. mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
+   5. copy `files/honeypot/task2/config.toml` to `~/honeytrap`
+   6. copy `files/honeypot/task2/docker-compose.yml` to `~/honeytrap`
