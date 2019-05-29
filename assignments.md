@@ -36,7 +36,7 @@ Hint: If Snort doesn´t show alerts, maybe start it with option `-k none`
 
 Use `cowrie`  to set up a SSH "vulnerability". Start the `cowrie`  docker container and configure it to open  a weak protected SSH port.
 
-1. Run the Cowrie container and use docker publish parameter to bind port 22 from the hostmachine to port 2222 from the cowrie container <br> [Hint: docker run -p host_port:container_port cowrie:cowrie]
+1. Run the Cowrie container and use docker publish parameter to bind port 22 from the hostmachine to port 2222 from the cowrie container <br> [Hint: docker run -p host_port:container_port cowrie/cowrie]
 2. Open a new terminal and ssh into the machine [hint ssh root@localhost] ... But what is the password? Maybe try the most commonly used passwords ....
 3. When you have access to the machine look around, find out what kind of machine this is, check that we are root and download some maleware (or wget any website). Did you find any hints you are in a Honeypot?
 4. Now switch to the defender point of view: As you can see in the window,  where honeypot was started, cowrie logs everything we do.
