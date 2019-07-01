@@ -5,6 +5,8 @@ type="socket"
 type="ssh-simulator"
 credentials=["root:root", "root:password"]
 
+# ~~~~~~~~~~~~~~~~~ Begin solution 2.2 ~~~~~~~~~~~~~~~~~~~
+
 [[port]]
 port="tcp/22"
 services=["ssh-simulator"]
@@ -16,6 +18,10 @@ prompt=">>"
 [[port]]
 port="tcp/23"
 services=["telnet"]
+
+# ~~~~~~~~~~~~~~~~~ End solution 2.2 ~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~ Begin solution 2.5 ~~~~~~~~~~~~~~~~~~~
 
 [service.http]
 type="http"
@@ -31,15 +37,14 @@ type="https"
 port="tcp/443"
 services=["https"]
 
+# ~~~~~~~~~~~~~~~~~ End solution 2.5 ~~~~~~~~~~~~~~~~~~~~~
+
+
 [channel.console]
 type="console"
 
-[channel.elasticsearch]
-type="elasticsearch"
-url="http://elasticsearch:9200/honeytrap"
-
 [[filter]]
-channel=["console", "elasticsearch"]
+channel=["console"]
 
 [[logging]]
 output = "stdout"
