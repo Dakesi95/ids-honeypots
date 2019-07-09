@@ -46,6 +46,7 @@ Use `cowrie`  to set up a SSH "vulnerability". Start the `cowrie`  docker contai
 `Solution: docker run 22:2222 cowrie/cowrie`
 2. Open a new terminal and ssh into the machine [hint ssh root@localhost] ... But what is the password? Maybe try the most commonly used passwords .... <br>
 `Solution: Cowrie will accept every password entered, you can even enter no password`
+`ssh localhost`
 3. When you have access to the machine look around, find out what kind of machine this is, check that we are root and download some maleware (or wget any website). Did you find any hints you are in a Honeypot? <br>
 `Solution:` <br>
 ` Type of machine: uname -a` <br>
