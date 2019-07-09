@@ -65,6 +65,7 @@ Use `cowrie`  to set up a SSH "vulnerability". Start the `cowrie`  docker contai
 `Solution: Can be found in ./solution/config.toml`
 3. Log in as root with SSH.<br>[Note: What is the password? Maybe take a second look at the `config.toml`.] <br>
 `Solution There are two passwords configured for user root: "root" and "password"`
+`ssh localhost`
 4. How does it differ from `cowrie`? <br>
 `Solution: You can't use any services.`
 5. Now setup services `tcp/80` (for HTTP) and `tcp/443` (for HTTPS) to imitate an Webserver.<br>[Note 1: You need to restart the honeytrap server afterwards]<br>[Note 2: Try to access these sites from a browser] <br>
