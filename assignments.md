@@ -77,11 +77,13 @@ Use `cowrie`  to set up a SSH "vulnerability". Start the `cowrie`  docker contai
    `Stop the currently running honeytrap-container: docker kill honeytrap && docker rm honeytrap`
    `Execute steps 2.7.1 - 2.7.3` <br>
    `Head to directory ./2.7` <br>
+   `Create Docker-Network "honeytrap": docker network create honeytrap`
    `Start honeytrap-container with new configuration: docker-compose up`
 
    1. Switch off the VM and give it the maximum of power you can afford.
-   2. Add to file `/etc/sysctl.conf` the following content: `vm.max_map_count=262144` 
-   3. Execute `sudo sysctl -p`
+   2. Add to file `/etc/sysctl.conf` the following content: `vm.max_map_count=262144`, to increaese the OS's version maximum mmap size. Elasticsearch uses mmapfs directory by default to store its indices.
+   3. Execute `sudo sysctl -p` to apply this changes
+   4. Execute the docker-compose-file `./2.7/docker-compose.yml`
    4. Head to `localhost:5601` in a browser 
    5. Set `honeytrap`  as Index Pattern.
    6. Press on `Discover` on the left side and take a look at the events.
