@@ -1,11 +1,39 @@
 [listener]
 type="socket"
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~ Begin solution 2.2 ~~~~~~~~~~~~~~~~~~~
 
-# Enter here the service config
+[[port]]
+port="tcp/22"
+services=["ssh-simulator"]
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[service.telnet]
+type="telnet"
+prompt=">>"
+
+[[port]]
+port="tcp/23"
+services=["telnet"]
+
+# ~~~~~~~~~~~~~~~~~ End solution 2.2 ~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~ Begin solution 2.5 ~~~~~~~~~~~~~~~~~~~
+
+[service.http]
+type="http"
+
+[[port]]
+port="tcp/80"
+services=["http"]
+
+[service.https]
+type="https"
+
+[[port]]
+port="tcp/443"
+services=["https"]
+
+# ~~~~~~~~~~~~~~~~~ End solution 2.5 ~~~~~~~~~~~~~~~~~~~~~
 
 [channel.console]
 type="console"
