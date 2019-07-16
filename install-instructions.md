@@ -51,7 +51,7 @@ The following commands will download the Lua Just-in-time-compiler in the home d
 snort is now installed. Check it out with `snort -V`
 
 ### 1.6 Create Snort Folders
-Snort need some folder and files to place its logs, errors and rule-files. Run the `/install-scripts/setup-dirs.sh`script with to set these up.
+Snort need some folders and files to place its logs, errors and rule-files. Run the `/install-scripts/setup-dirs.sh`script to set these up.
 
 ### 1.7 Configure Snort
 To configure Snort, run `/install-scripts/snort-config.sh`
@@ -80,13 +80,9 @@ sudo snap install docker
 ## 3. Pull required Docker containers
 
 1. Cowrie:
-  * docker pull cowrie/cowrie
-  * mkdir ~/cowrie
-  * cd ~/cowrie
+  1. docker pull cowrie/cowrie
    
 2. HoneyTrap
-   * docker pull honeytrap/honeytrap
-   * mkdir ~/honeytrap
-   * docker network create honeytrap
-   * cd ~/honeytrap
-   * mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
+   1. docker pull honeytrap/honeytrap
+   2. docker network create honeytrap
+   3. mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
