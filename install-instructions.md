@@ -1,4 +1,4 @@
-# 1. Snort
+# 1. Install Snort
 
 ### 1.1 Bring dist to latest release
 
@@ -7,7 +7,7 @@
 
 Restart machine afterwards.
 
-The `/install-scripts/install-snort.sh` will install do task 1.2, 1.3, 1.4, 1.5 for you.
+The `/install-scripts/install-snort.sh` will do subsection 1.2, 1.3, 1.4, 1.5.
 
 ### 1.2 Install required plugins
 
@@ -51,9 +51,13 @@ The following commands will download the Lua Just-in-time-compiler in the home d
 snort is now installed. Check it out with `snort -V`
 
 ### 1.6 Create Snort Folders
-Snort need some folder and files to place its logs,errors and rules files, therefore run the `/install-scripts/setup-dirs.sh`script with `sh setup-dirs.sh`
+Snort need some folder and files to place its logs, errors and rule-files. Run the `/install-scripts/setup-dirs.sh`script with to set these up.
 
-## 2. Install Docker on Kali Linux
+### 1.7 Configure Snort
+To configure Snort, run `/install-scripts/snort-config.sh`
+
+## 2. Install Docker
+### 2.1 Install Docker on Kali
 
 Use the `/install-scripts/install-docker.sh` script or the following commands to install Docker on Kali:
 
@@ -63,27 +67,26 @@ Use the `/install-scripts/install-docker.sh` script or the following commands to
 4. apt-get remove docker docker-engine docker.io
 5. apt-get install docker-ce
 6. sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-7. sudo chmod +x /usr/local/bin/docker-compose
+7. sudo chmod +x /usr/local/bin/docker-compose 
 
-<br><br>
 
-To install Docker on Ubuntu:
-1. sudo snap install docker
+
+### 2.2 Install Docker on Ubuntu
+
+sudo snap install docker
 
 
 
 ## 3. Pull required Docker containers
 
 1. Cowrie:
-   1. docker pull cowrie/cowrie
-   2. mkdir ~/cowrie
-   3. cd ~/cowrie
+  * docker pull cowrie/cowrie
+  * mkdir ~/cowrie
+  * cd ~/cowrie
    
 2. HoneyTrap
-   1. docker pull honeytrap/honeytrap
-   2. mkdir ~/honeytrap
-   3. docker network create honeytrap
-   4. cd ~/honeytrap
-   5. mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
-   6. copy `/files/honeypot/task2/config.toml` to `~/honeytrap`
-   7. copy `/files/honeypot/task2/docker-compose.yml` to `~/honeytrap`
+   * docker pull honeytrap/honeytrap
+   * mkdir ~/honeytrap
+   * docker network create honeytrap
+   * cd ~/honeytrap
+   * mkdir -p /data/elasticsearch/data **&&** sudo chown -R 1000:1000 /data/elasticsearch
